@@ -2,10 +2,6 @@ body {
   font-family: arial, sans-serif;
 }
 
-h1 {
-  color: rgb(44, 44, 44);
-}
-
 li {
   list-style: none;
   margin: 0;
@@ -26,9 +22,16 @@ ul {
   border-radius: 10px;
 }
 
+.city {
+  color: rgb(44, 44, 44);
+  font-size: 35px;
+  font-weight: 500;
+}
+
 .main-info {
   font-size: 20px;
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
 .main-temp {
