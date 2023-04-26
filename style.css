@@ -49,6 +49,19 @@ ul {
 .other-metrics ul {
   font-size: 15px;
 }
+
+.weather-forecast {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.weather-forecast .forecast-date {
+  font-size: 16px;
+}
+
+.weather-forecast .forecast-temperature {
+}
 .footer {
   font-size: smaller;
   text-align: center;
