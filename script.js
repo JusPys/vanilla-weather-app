@@ -16,6 +16,28 @@ function formatDate(timestamp) {
   return `${day} ${hour}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-3">
+    <div class="forecast-date"> ${day} </div>
+    <img src="http://openweathermap.org/img/wn/01d@2x.png" width="50px"></img>
+  <div class="forecast-temperature">
+    <span class="forecast-min-temp">20 - </span>
+    <span class="forecast-max-temp">25°C</span>
+  </div>
+  </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   //Checking how to find the element in the API response
   //console.log(response.data);
@@ -83,3 +105,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 search("Lisbon");
+displayForecast();
